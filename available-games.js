@@ -7,7 +7,7 @@ function print(result) {
 }
 
 async function availableGames (requests) {
-    const SSOID_COOKIE = `ssoid=TKe4EFLA80Qm5ikt2NXW9zif3dkUVejeGZeL+jwhbFY=`;
+    const SSOID_COOKIE = `ssoid=EXAMPLE`;
     const AVAILABLE_GAMES_PATH = "/api/gfe/available-games/v1/available-games";
     // const AVAILABLE_GAMES_PATH = "/api/available-games";
 
@@ -36,9 +36,9 @@ async function availableGames (requests) {
     const result = await autocannon({
         //url: 'http://gfe.local.paddypower.com.nxt.ppbdev.com:9161',
         url: 'http://ie1-gfepp01a-nxt.nxt.betfair:8080',
-        connections: 50,
+        connections: 40,
         duration: 240,
-        overallRate: 50,
+        overallRate: 40,
         timeout: 20,
         headers: {
             "Host": "gfe.paddypower.com.nxt.ppbdev.com",
@@ -63,5 +63,10 @@ availableGames([
         path: "?product=pokersg&format=poker-lite&platform=desktop",
         typeOfPath: "pokersg desktop",
         loggedIn: false
+    },
+    {
+        path: "?product=pokersg&format=poker-lite&platform=desktop",
+        typeOfPath: "pokersg desktop",
+        loggedIn: true
     }
 ]);

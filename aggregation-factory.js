@@ -6,7 +6,7 @@ function print(result) {
 }
 
 async function aggregationData (requests) {
-    const SSOID_COOKIE = `ssoid=TKe4EFLA80Qm5ikt2NXW9zif3dkUVejeGZeL+jwhbFY=`;
+    const SSOID_COOKIE = `ssoid=EXAMPLE`;
     const AGGREGATION_PATH = "/api/gfe/aggregation-data/v1/aggregation-data";
     // const AGGREGATION_PATH = "/api/aggregation-data";
 
